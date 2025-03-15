@@ -124,23 +124,28 @@ function App() {
     }
   };
 
+
   return (
     <>
       <ToastContainer />
       <Header />
       <div className='container'>
-        <GridView
-          handleAddToWishlist={() => handleAddToWishlist(item)}
-          handleAddToCart={() => handleAddToCart(item)}
-        />
-        <ListView
-          handleAddToWishlist={() => handleAddToWishlist(item)}
-          handleAddToCart={() => handleAddToCart(item)}
-        />
+        {viewModel === 'Grid' ? (
+          <GridView
+            handleAddToWishlist={() => handleAddToWishlist(item)}
+            handleAddToCart={() => handleAddToCart(item)}
+          />
+        ) : (
+          <ListView
+            handleAddToWishlist={() => handleAddToWishlist(item)}
+            handleAddToCart={() => handleAddToCart(item)}
+          />
+        )}
       </div>
       <NavigationBar
         handleWishlistDrawer={handleWishlistDrawer}
         handleCartDrawer={handleCartDrawer}
+        setviewModel={setviewModel}
       />
 
       {/* Drawer Component */}
