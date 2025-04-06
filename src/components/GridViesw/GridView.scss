@@ -1,7 +1,6 @@
-@import '../../style.scss';
-
+@use '../../style';
 .card {
-    width: $card-width;
+    width: style.$card-width;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -16,14 +15,14 @@
     }
 
     .icon {
-        width: $icon-size;
-        height: $icon-size;
+        width: style.$icon-size;
+        height: style.$icon-size;
         cursor: pointer;
-        color: $text-color;
+        color: style.$text-color;
         transition: color 0.3s;
 
         &:hover {
-            color: $primary-color;
+            color: style.$primary-color;
         }
     }
 
@@ -39,20 +38,20 @@
     }
 
     .card-title {
-        font-size: $title-font-size;
+        font-size: style.$title-font-size;
         font-weight: bold;
         margin-bottom: 10px;
     }
 
     .card-description {
-        font-size: $description-font-size;
-        color: $text-color;
+        font-size: style.$description-font-size;
+        color: style.$text-color;
         margin-bottom: 15px;
     }
 
     .card-price {
-        font-size: $price-font-size;
-        color: $primary-color;
+        font-size: style.$price-font-size;
+        color: style.$primary-color;
         font-weight: bold;
         margin-bottom: 10px;
     }
@@ -60,13 +59,13 @@
     .card-button {
         display: inline-block;
         padding: 10px 20px;
-        background: $primary-color;
+        background: style.$primary-color;
         color: white;
         text-decoration: none;
         border-radius: 5px;
-        font-size: $button-font-size;
+        font-size: style.$button-font-size;
         &:hover {
-            background: $hover-color;
+            background: style.$hover-color;
         }
     }
 }
