@@ -1,21 +1,17 @@
+import './Header.scss';
 export function Header() {
   return (
     <>
       <header className="header-container d-between">
-        <div>
-          <img src="" alt="brand-log" />
+        <div className="header-log">
+          <img src="#" alt="brand-log" />
         </div>
-        <nav>
-          <ul className='header-nav'> 
-            <li className='header-nav-item'>
-              <a href='/'>Home</a>
+        <nav className='header-nav'>
+          <ul className='d-flex gap-8'>
+            <li className='header-nav-item'>Home</li>
+            <li className='header-nav-item'>About
             </li>
-            <li className='header-nav-item'>
-              <a href='/about'>About</a>
-            </li>
-            <li className='header-nav-item'>
-              <a href='/contact'>Contact</a>
-            </li>
+            <li className='header-nav-item'>Contact</li>
           </ul>
         </nav>
       </header>
