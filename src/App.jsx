@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import './style.scss'
-
 import {
   DrawerModel,
   GridView,
@@ -23,16 +22,13 @@ import { ToastContainer } from 'react-toastify';
 
 function App() {
   const [viewModel, setviewModel] = useState('Grid');
-
   /*  Drawer State Start */
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [drawerDirection, setDrawerDirection] = useState('right');
   const [drawerContent, setDrawerContent] = useState(null);
   /*  Drawer State Close */
-
   const [cartItems, setCartItems] = useState([]);
   const [wishlistItems, setWishlistItems] = useState([]);
-
   // Load stored data from localStorage on component mount
   useEffect(() => {
     const storedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
