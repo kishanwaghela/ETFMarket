@@ -20,6 +20,7 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     font-family: 'poppins', sans-serif;
+    /* font-family: "Lato", sans-serif; */
 }
 
 img,
@@ -99,7 +100,11 @@ h6 {
     align-items: center;
 }
 
-.d-between {
+.gap-5{
+    gap: 5px;
+}
+
+.flex-between {
     display: flex;
     justify-content: space-between;
     align-items: center;

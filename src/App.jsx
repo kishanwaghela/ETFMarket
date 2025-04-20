@@ -2,16 +2,13 @@ import { useEffect, useState } from 'react';
 import './style.scss'
 import {
   DrawerModel,
+  Footer,
   GridView,
   Header,
   ListView,
   NavigationBar,
 } from './components';
 import {
-  // ShoppingCart,
-  // Heart,
-  // List,
-  // Grid,
   Plus,
   Minus,
   Trash2,
@@ -19,6 +16,8 @@ import {
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import { Outlet } from 'react-router-dom';
+import { etf } from './data';
 
 function App() {
   const [viewModel, setviewModel] = useState('Grid');
@@ -130,11 +129,13 @@ function App() {
       <div className='container'>
         {viewModel === 'Grid' ? (
           <GridView
+            data={etf}
             handleAddToWishlist={() => handleAddToWishlist(item)}
             handleAddToCart={() => handleAddToCart(item)}
           />
         ) : (
           <ListView
+            data={etf}
             handleAddToWishlist={() => handleAddToWishlist(item)}
             handleAddToCart={() => handleAddToCart(item)}
           />
@@ -145,7 +146,8 @@ function App() {
         handleCartDrawer={handleCartDrawer}
         setviewModel={setviewModel}
       />
-
+      <Outlet />
+      <Footer />
       {/* Drawer Component */}
       <DrawerModel
         isOpen={isDrawerOpen}

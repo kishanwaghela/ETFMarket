@@ -2,7 +2,7 @@ import './Header.scss';
 export function Header() {
   return (
     <>
-      <header className="header-container d-between">
+      <header className="header-container flex-between">
         <div className="header-log">
           <img src="#" alt="brand-log" />
         </div>
