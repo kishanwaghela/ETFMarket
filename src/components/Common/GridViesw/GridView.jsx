@@ -2,8 +2,6 @@
 
 import './GridView.scss';
 export function GridView({ data }) {
-  console.log(data?.data.map((iteam) => (iteam?.prevClose - iteam?.ltP)));
-
   return (
     <div className='card-container d-flex'>
       {data?.data?.map((item) => (
@@ -47,9 +45,7 @@ export function GridView({ data }) {
               </div>
             </div>
           </div>
-        </div>
-      ))
-      }
+        </div>))}
     </div>
   );
 }
